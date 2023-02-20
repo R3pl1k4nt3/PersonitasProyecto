@@ -6,7 +6,7 @@
                 <div class ="col-md-12">
                     <b-table striped hover :items="personas" :fields="fields">
                         
-                        <template slot=cell(action) slot-scope="data" >
+                        <template slot=cell(action) slot-scope="data">
                             <b-button size="sm" variant="primary">
                                 EDITAR
                             </b-button>
@@ -32,7 +32,7 @@
                     {key:'nombre', label: 'Nombre '},
                     {key:'apellidos', label: 'Apellidos' },
                     {key:'empleo', label: 'Empleo' },
-                    {key:'action', label: 'ACCION' },
+                    {key:'action', label: '' },
 
                     //{key:'unidad', label: 'Unidad' },
                     //{key:'departamento', label: 'Departamento' }
