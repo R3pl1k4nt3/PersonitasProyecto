@@ -6,8 +6,17 @@
                 <div class ="col-md-12">
                     <b-table striped hover :items="personas" :fields="fields">
                         
+                        <template slot=cell(action) slot-scope="data" >
+                            <b-button size="sm" variant="primary">
+                                EDITAR
+                            </b-button>
+                            <b-button size="sm" variant="danger">
+                                ELIMINAR
+                            </b-button>
+                        </template>                     
                     </b-table>
                 </div>
+              
             </div>
         </div>
     </div>
@@ -23,7 +32,7 @@
                     {key:'nombre', label: 'Nombre '},
                     {key:'apellidos', label: 'Apellidos' },
                     {key:'empleo', label: 'Empleo' },
-                    {key:'action', label: 'Acción' },
+                    {key:'action', label: 'ACCION' },
 
                     //{key:'unidad', label: 'Unidad' },
                     //{key:'departamento', label: 'Departamento' }
