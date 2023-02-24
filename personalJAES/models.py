@@ -39,7 +39,7 @@ class Persona(models.Model):
     apellidos = models.CharField(max_length=255)
     telefono = models.CharField(max_length=255)
     fecha_incorporacion = models.DateField()
-    fotografia = models.ImageField()
+    fotografia = models.ImageField(null=True)
     unidad = models.ForeignKey(Unidad, on_delete=models.CASCADE)
     departamento = models.ForeignKey(Departamento, on_delete=models.CASCADE)
 
