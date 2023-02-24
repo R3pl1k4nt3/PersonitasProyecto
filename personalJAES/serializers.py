@@ -4,12 +4,12 @@ from .models import *
 class UnidadSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Unidad
-        fields = ('unidad',)
+        fields = ('unidad', 'id', 'url')
 
 class DepartamentoSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Departamento
-        fields = ('departamento', 'unidad')
+        fields = ('departamento', 'unidad' , 'id', 'url')
         
 class NegociadoSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
@@ -19,4 +19,4 @@ class NegociadoSerializer(serializers.HyperlinkedModelSerializer):
 class PersonaSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Persona
-        fields = ('empleo','nombre','apellidos','telefono','fecha_incorporacion','fotografia','unidad','departamento')
+        fields = ('id','url','empleo','nombre','apellidos','telefono','fecha_incorporacion','fotografia','unidad','departamento')
